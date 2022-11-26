@@ -2,7 +2,7 @@ package pgdp.messenger;
 
 public class UserArray {
 	// TODO: Implementiere die fehlenden Attribute
-	User[] users;
+	private User[] users;
 
 	public UserArray(int initCapacity) {
 		// TODO: Implementiere den Konstruktor
@@ -67,4 +67,9 @@ public class UserArray {
 	}
 
 	// TODO: Implementiere die fehlenden Methoden!
+	public void setUsers(User[] users) { this.users = users; }
+
+	public User[] getUsers() { return users; }
+
+
 }
