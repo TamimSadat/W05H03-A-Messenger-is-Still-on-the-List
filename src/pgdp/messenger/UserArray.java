@@ -44,10 +44,10 @@ public class UserArray {
 			}
 			else {//Wenn Array voll, also x gleich Array length
 				User[] newUser = new User[users.length * 2];
-				for (int i = 0; i < users.length; i++) {
+				/*for (int i = 0; i < users.length; i++) {
 					newUser[i] = users[i];
 				}
-				newUser[users.length] = user;
+				//newUser[users.length] = user;*/
 				this.users = newUser;
 			}
 
