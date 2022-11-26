@@ -94,10 +94,7 @@ public class UserArray {
 	public int size() {
 		int x = 0;
 		for (int i = 0; i < users.length; i++) {
-			if (users[i] == null) {
-				x = x;
-			}
-			else {
+			if (users[i] != null) {
 				x++;
 			}
 		}
