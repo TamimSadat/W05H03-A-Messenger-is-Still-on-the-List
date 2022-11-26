@@ -67,7 +67,7 @@ public class UserArray {
 		// TODO: Implementiere diese Methode!
 		int y = 0;
 		for (int i = 0; i < users.length; i++) {
-			if (users[i].equals(id)) {
+			if (users[i].getId() == id) {
 				y--;
 			}
 			else {
@@ -82,7 +82,7 @@ public class UserArray {
 			User[] delUser = new User[users.length];
 			int x = 0;
 			for (int i = 0; i < users.length; i++) {
-				if (users[i].equals(id)) {
+				if (users[i].getId() == id) {
 					x = i;
 				}
 				else {
