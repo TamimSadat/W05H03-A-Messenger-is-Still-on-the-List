@@ -75,7 +75,7 @@ public class UserArray {
 			}
 		}
 
-		if (y == users.length - 1) {
+		if (y == users.length) {
 			return null;
 		}
 		else {
