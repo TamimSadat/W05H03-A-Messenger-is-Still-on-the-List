@@ -3,6 +3,7 @@ package pgdp.messenger;
 public class UserArray {
 	// TODO: Implementiere die fehlenden Attribute
 	private User[] users;
+	private int initCapacity;
 
 	public UserArray(int initCapacity) {
 		// TODO: Implementiere den Konstruktor
@@ -22,7 +23,7 @@ public class UserArray {
 		// TODO: Implementiere diese Methode!
 		//User[] newUser = new User[use]
 		if (user == null) {
-
+			users[1] = null;
 		}
 		else {
 			int x = 0; //Fallunterscheidung, ob Array einen empty Spot hat oder nicht
@@ -94,7 +95,10 @@ public class UserArray {
 	public int size() {
 		int x = 0;
 		for (int i = 0; i < users.length; i++) {
-			if (users[i] != null) {
+			if (users[i] == null) {
+				x = x;
+			}
+			else {
 				x++;
 			}
 		}
