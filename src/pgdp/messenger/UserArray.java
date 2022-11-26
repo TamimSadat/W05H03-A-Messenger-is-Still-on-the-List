@@ -91,7 +91,6 @@ public class UserArray {
 			return users[x];
 		}
 	}
-
 	public int size(User[] users) {
 		int x = 0;
 		for (int i = 0; i < users.length; i++) {
