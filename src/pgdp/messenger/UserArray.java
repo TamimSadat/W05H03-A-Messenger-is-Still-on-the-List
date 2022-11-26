@@ -35,7 +35,7 @@ public class UserArray {
 				}
 			}
 
-			if (x < users.length) {//Array hat empty spot
+			if (x < users.length - 1) {//Array hat empty spot
 				for (int i = 0; i < users.length; i++) {
 					if (users[i] == null) {
 						users[i] = user;
@@ -63,8 +63,48 @@ public class UserArray {
 	 */
 	public User deleteUser(long id) {
 		// TODO: Implementiere diese Methode!
-		return null;
+		int y = 0;
+		for (int i = 0; i < users.length; i++) {
+			if (users[i].equals(id)) {
+				y--;
+			}
+			else {
+				y++;
+			}
+		}
+
+		if (y == users.length - 1) {
+			return null;
+		}
+		else {
+			User[] delUser = new User[users.length];
+			int x = 0;
+			for (int i = 0; i < users.length; i++) {
+				if (users[i].equals(id)) {
+					x = i;
+				}
+				else {
+					delUser[i] = users[i];
+				}
+			}
+			this.users = delUser;
+			return users[x];
+		}
 	}
+
+	public int size(User[] users) {
+		int x = 0;
+		for (int i = 0; i < users.length; i++) {
+			if (users[i] == null) {
+				x = x;
+			}
+			else {
+				x++;
+			}
+		}
+		return x;
+	}
+
 
 	// TODO: Implementiere die fehlenden Methoden!
 	public void setUsers(User[] users) { this.users = users; }
