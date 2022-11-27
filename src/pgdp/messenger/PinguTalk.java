@@ -46,11 +46,30 @@ public class PinguTalk {
     }
 
     public Topic createNewTopic(String name) {
-
-        return null;
+        Topic newTopic = new Topic(topicID, name);
+        int x = 0;
+        for (int i = 0; i < topics.length; i++) {
+            if (topics[i] == null) {
+                topics[i] = newTopic;
+                break;
+            }
+            else {
+                x++;
+            }
+        }
+        if (x == topics.length) {
+            return null;
+        }
+        else {
+            topicID++;
+            return newTopic;
+        }
     }
 
     public Topic deleteTopic(long userID) {
+
+
+
 
         return null;
     }
