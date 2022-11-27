@@ -48,8 +48,10 @@ public class PinguTalk {
     public Topic createNewTopic() {
         return null;
     }
-    public Topic deleteTopic() {
-        return null;
-    }
+    public Topic deleteTopic() { return null; }
+
+    public UserArray getMembers() { return members; }
+
+    public Topic[] getTopics() { return topics; }
 
 }
