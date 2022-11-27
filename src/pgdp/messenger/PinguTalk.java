@@ -9,8 +9,19 @@ public class PinguTalk {
 
     // TODO: Implementiere den fehlenden Konstruktor
     public PinguTalk(int UserArrayLange, int topicsLange) {
-
-        if (UserArrayLange > 0 && topicsLange > 0) {
+        if (UserArrayLange < 1 && topicsLange < 1) {//Wenn beide unter 1
+            UserArray members = new UserArray(1);
+            Topic[] topics = new Topic[1];
+        }
+        else if (UserArrayLange < 1 && topicsLange > 0) {//Wenn nur members Startlänge unter 1
+            UserArray members = new UserArray(1);
+            Topic[] topics = new Topic[topicsLange];
+        }
+        else if (UserArrayLange > 0 && topicsLange < 1) {//Wenn nur topics Startlänge unter 1
+            UserArray members = new UserArray(UserArrayLange);
+            Topic[] topics = new Topic[1];
+        }
+        else {//Wenn beide über 1
             UserArray members = new UserArray(UserArrayLange);
             Topic[] topics = new Topic[topicsLange];
         }
