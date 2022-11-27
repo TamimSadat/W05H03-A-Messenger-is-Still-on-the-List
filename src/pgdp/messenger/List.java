@@ -7,6 +7,7 @@ public class List {
 	private ListElement tail;
 	private int size;
 
+
 	public boolean isEmpty() {
 		return head == null;
 	}
@@ -109,7 +110,34 @@ public class List {
 	 */
 	public Message getByID(long id) {
 		// TODO: Implementiere diese Methode
-		return null;
+		ListElement newNahchste = head;
+		boolean messageEnthalten = false;
+		for (int i = 0; i < size; i++) {
+			if (newNahchste.getMessage().getId() == id) {
+				messageEnthalten = true;
+			}
+			else {
+				newNahchste = newNahchste.getNext();
+			}
+		}
+		if (!messageEnthalten /*false*/) {
+			return null;
+		}
+		else {
+			int x = 0;
+			while (x < size) {
+				if (newNahchste.getMessage().getId() == id) {
+					Message nachricht = newNahchste.getMessage();
+					return nachricht;
+				}
+				else {
+					newNahchste = newNahchste.getNext();
+					x++;
+				}
+			}
+
+			return null;
+		}
 	}
 
 	/** Merged die übergebenen Listen in eine große Liste. Diese wird dann zurückgegeben.
