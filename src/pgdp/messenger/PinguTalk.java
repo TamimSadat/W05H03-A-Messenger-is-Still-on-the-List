@@ -71,7 +71,7 @@ public class PinguTalk {
         int y = 0;
         for (int i = 0; i < topics.length; i++) {
 
-            if (topics[i].equals(userID)) {
+            if (topics[i].getId() == userID) {
                 topics[i] = null;
                 y = i;
                 break;
