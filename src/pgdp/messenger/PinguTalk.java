@@ -67,11 +67,26 @@ public class PinguTalk {
     }
 
     public Topic deleteTopic(long userID) {
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i < topics.length; i++) {
 
+            if (topics[i].equals(userID)) {
+                topics[i] = null;
+                y = i;
+                break;
+            }
+            else {
+                x++;
+            }
 
-
-
-        return null;
+        }
+        if (x == topics.length) {
+            return null;
+        }
+        else {
+            return topics[y];
+        }
     }
 
 
