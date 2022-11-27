@@ -68,12 +68,12 @@ public class PinguTalk {
 
     public Topic deleteTopic(long userID) {
         int x = 0;
-        int y = 0;
+        Topic[] delTopic = new Topic[1];
         for (int i = 0; i < topics.length; i++) {
 
             if (topics[i].getId() == userID) {
+                delTopic[0] = topics[i];
                 topics[i] = null;
-                y = i;
                 break;
             }
             else {
@@ -85,7 +85,7 @@ public class PinguTalk {
             return null;
         }
         else {
-            return topics[y];
+            return delTopic[0];
         }
     }
 
