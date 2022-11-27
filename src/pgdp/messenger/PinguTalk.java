@@ -69,28 +69,28 @@ public class PinguTalk {
     public Topic deleteTopic(long userID) {
         int x = 0;
         Topic delTopic;
-        if (topics.length == 0) {
-            return null;
-        }
-        else {
-            for (int i = 0; i < topics.length; i++) {
+        for (int i = 0; i < topics.length; i++) {
 
+            if (topics[i] == null) {
+
+            }
+            else {
                 if (topics[i].getId() == userID) {
                     delTopic = topics[i];
                     topics[i] = null;
                     return delTopic;
-                }
-                else {
+                } else {
                     x++;
                 }
+            }
 
-            }
-            if (x == topics.length) {
-                return null;
-            }
+        }
+        if (x == topics.length) {
+            return null;
         }
         return null;
     }
+
 
 
     public Topic createNewTopic() {
