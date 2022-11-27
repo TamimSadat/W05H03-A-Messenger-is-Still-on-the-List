@@ -2,8 +2,8 @@ package pgdp.messenger;
 
 public class PinguTalk {
 	// TODO: Implementiere die fehlenden Attribute
-    private long topicID;
-    private long userID;
+    private static long topicID;
+    private static long userID;
     private UserArray members;
     private Topic[] topics;
 
